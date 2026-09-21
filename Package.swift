@@ -7,10 +7,17 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        .library(name: "SensiAuraKeys", type: .dynamic, targets: ["SensiAuraKeys"])
+        .library(
+            name: "SensiAuraKeys",
+            type: .dynamic,
+            targets: ["SensiAuraKeys"]
+        )
     ],
     targets: [
-        .target(name: "SensiAuraKeys", path: "Sources/SensiAuraKeys"),
-        .testTarget(name: "SensiAuraKeysTests", dependencies: ["SensiAuraKeys"], path: "Tests/SensiAuraKeysTests")
+        .target(name: "SensiAuraKeys"),
+        .testTarget(
+            name: "SensiAuraKeysTests",
+            dependencies: ["SensiAuraKeys"]
+        )
     ]
 )
